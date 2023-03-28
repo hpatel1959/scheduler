@@ -7,7 +7,7 @@ import Form from "./Form";
 import useVisualMode from "hooks/useVisualMode";
 
 export default function Appointment(props) {
-  const {time, interview} = props;
+  const {time, interview, interviewers} = props;
 
   const EMPTY = 'EMPTY';
   const SHOW = 'SHOW';
@@ -22,7 +22,7 @@ export default function Appointment(props) {
       <Header time={time}/>
       {mode === SHOW && <Show student={interview.student} interviewer={interview.interviewer}/>}
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)}/>}
-      {mode === CREATE && <Form interviewers={[]} onCancel={back}/>}
+      {mode === CREATE && <Form interviewers={interviewers} onCancel={back}/>}
     </article>
   );
 }
