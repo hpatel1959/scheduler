@@ -5,16 +5,18 @@ import DayList from "./DayList";
 import "components/Appointment"
 import Appointment from "components/Appointment";
 import getAppointmentsForDay from "helpers/selectors";
+import { getInterview } from "helpers/selectors";
 
 
 export default function Application(props) {
   const [state, setState]= useState({
     day: 'Monday',
     days: [],
-    appointments: {}
+    appointments: {},
+    interviewers: {}
   })
 
-  const dailyAppointments = getAppointmentsForDay(state, state.day);
+
   
   const setDay = (day) => {
     setState({...state, day: day.name})
@@ -27,16 +29,21 @@ export default function Application(props) {
       axios.get('/api/interviewers')
     ])
       .then((all) => {
-        setState(prev => ({...prev, days: all[0].data, appointments: all[1].data}));
+        setState(prev => ({...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data}));
       });
   }, [])
 
+  const dailyAppointments = getAppointmentsForDay(state, state.day);
 
   const appointmentsArr = Object.values(dailyAppointments).map(appointment => {
+    const interview = getInterview(state, appointment.interview);
+
     return (
       <Appointment
         key={appointment.id}
-        {...appointment}
+        id={appointment.id}
+        time={appointment.time}
+        interview={interview}
       />
     );
   })
