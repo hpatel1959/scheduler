@@ -21,3 +21,11 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## What the App Looks Like!
+
+!["List of interviews for specific day, in this image, the day is Wednesday, with one appointment booked!"](https://github.com/hpatel1959/scheduler/blob/master/docs/show-appointment-list.png?raw=true)
+
+!["Form to add new appointment when add button is clicked!"](https://github.com/hpatel1959/scheduler/blob/master/docs/new-appointment-form.png?raw=true)
+
+!["Form to confirm deletion of appointment, shown after the delete button is clicked!"](https://github.com/hpatel1959/scheduler/blob/master/docs/confirm-delete-appointment-form.png?raw=true)
