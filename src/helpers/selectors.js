@@ -29,6 +29,4 @@ export const getInterview = function(state, interview) {
   } else {
     return null;
   }
-
-  // console.log({'student': student, interviewer: state.interviewers[interviewerID]});
 }
