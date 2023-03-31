@@ -26,18 +26,18 @@ npm run storybook
 
 !["List of interviews for specific day, in this image, the day is Wednesday, with one appointment booked!"](https://github.com/hpatel1959/scheduler/blob/master/docs/show-appointment-list.png?raw=true)
 
-```no-highlight
+```
 List of interviews for specific day, in this image, the day is Wednesday, with one appointment booked!
 ```
 
 !["Form to add new appointment when add button is clicked!"](https://github.com/hpatel1959/scheduler/blob/master/docs/new-appointment-form.png?raw=true)
 
-```no-highlight
+```
 Form to add new appointment when add button is clicked!
 ```
 
 !["Form to confirm deletion of appointment, shown after the delete button is clicked!"](https://github.com/hpatel1959/scheduler/blob/master/docs/confirm-delete-appointment-form.png?raw=true)
 
-```no-highlight
+```
 Form to confirm deletion of appointment, shown after the delete button is clicked!
 ```
